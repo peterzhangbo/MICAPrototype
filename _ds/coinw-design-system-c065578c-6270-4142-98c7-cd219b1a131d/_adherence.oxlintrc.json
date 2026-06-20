@@ -1,0 +1,208 @@
+{
+  "plugins": [
+    "react",
+    "import"
+  ],
+  "rules": {
+    "react/forbid-elements": [
+      "warn",
+      {
+        "forbid": []
+      }
+    ],
+    "no-restricted-imports": [
+      "warn",
+      {
+        "patterns": [
+          {
+            "group": [
+              "ui_kits/app/**",
+              "ui_kits/web/**"
+            ],
+            "message": "Import design-system components from 'index.js', not component internals."
+          }
+        ]
+      }
+    ],
+    "no-restricted-syntax": [
+      "warn",
+      {
+        "selector": "Literal[value=/#[0-9a-fA-F]{3,8}\\b/]",
+        "message": "Raw hex color — use a design-system color token via var()."
+      },
+      {
+        "selector": "Literal[value=/\\b\\d+px\\b/]",
+        "message": "Raw px value — use a design-system spacing token via var()."
+      },
+      {
+        "selector": "Literal[value=/font-family\\s*:\\s*(?!['\\\"]?(?:Satoshi|HarmonyOS Sans SC))/i]",
+        "message": "Font not provided by the design system. Available: Satoshi, HarmonyOS Sans SC."
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/index.js"
+      ],
+      "rules": {
+        "no-restricted-imports": "off"
+      }
+    }
+  ],
+  "x-omelette": {
+    "components": {},
+    "tokens": [
+      "--cw-amber",
+      "--cw-black",
+      "--cw-brand-400",
+      "--cw-brand-500",
+      "--cw-brand-700",
+      "--cw-brand-tint-08",
+      "--cw-brand-tint-12",
+      "--cw-brand-violet",
+      "--cw-dur",
+      "--cw-dur-fast",
+      "--cw-dur-slow",
+      "--cw-ease",
+      "--cw-elev-1",
+      "--cw-elev-2",
+      "--cw-elev-3",
+      "--cw-error",
+      "--cw-font-cjk",
+      "--cw-font-mono",
+      "--cw-font-sans",
+      "--cw-fs-body",
+      "--cw-fs-body-l",
+      "--cw-fs-display",
+      "--cw-fs-h1",
+      "--cw-fs-h2",
+      "--cw-fs-h3",
+      "--cw-fs-micro",
+      "--cw-fs-small",
+      "--cw-info",
+      "--cw-ink",
+      "--cw-ink-2",
+      "--cw-ink-3",
+      "--cw-ink-4",
+      "--cw-ink-a05",
+      "--cw-ink-a22",
+      "--cw-lh-body",
+      "--cw-lh-body-l",
+      "--cw-lh-display",
+      "--cw-lh-h1",
+      "--cw-lh-h2",
+      "--cw-lh-h3",
+      "--cw-lh-micro",
+      "--cw-lh-small",
+      "--cw-lime",
+      "--cw-line",
+      "--cw-ls-body",
+      "--cw-ls-display",
+      "--cw-r-2xl",
+      "--cw-r-full",
+      "--cw-r-lg",
+      "--cw-r-md",
+      "--cw-r-pill",
+      "--cw-r-sm",
+      "--cw-r-xl",
+      "--cw-r-xs",
+      "--cw-s-1",
+      "--cw-s-10",
+      "--cw-s-12",
+      "--cw-s-16",
+      "--cw-s-2",
+      "--cw-s-20",
+      "--cw-s-3",
+      "--cw-s-4",
+      "--cw-s-5",
+      "--cw-s-6",
+      "--cw-s-8",
+      "--cw-s-card-pad",
+      "--cw-shadow-soft",
+      "--cw-success",
+      "--cw-surface-1",
+      "--cw-surface-2",
+      "--cw-warning",
+      "--cw-white"
+    ],
+    "tokenKinds": {
+      "--cw-brand-500": "color",
+      "--cw-brand-400": "color",
+      "--cw-brand-700": "color",
+      "--cw-brand-violet": "color",
+      "--cw-brand-tint-08": "color",
+      "--cw-brand-tint-12": "color",
+      "--cw-ink": "color",
+      "--cw-ink-2": "color",
+      "--cw-ink-3": "color",
+      "--cw-ink-4": "color",
+      "--cw-line": "color",
+      "--cw-surface-2": "color",
+      "--cw-surface-1": "color",
+      "--cw-black": "color",
+      "--cw-white": "color",
+      "--cw-ink-a05": "color",
+      "--cw-ink-a22": "color",
+      "--cw-shadow-soft": "shadow",
+      "--cw-success": "color",
+      "--cw-error": "color",
+      "--cw-warning": "color",
+      "--cw-info": "color",
+      "--cw-lime": "color",
+      "--cw-amber": "color",
+      "--cw-font-sans": "font",
+      "--cw-font-cjk": "font",
+      "--cw-font-mono": "font",
+      "--cw-fs-display": "spacing",
+      "--cw-lh-display": "spacing",
+      "--cw-ls-display": "spacing",
+      "--cw-fs-h1": "spacing",
+      "--cw-lh-h1": "spacing",
+      "--cw-fs-h2": "spacing",
+      "--cw-lh-h2": "spacing",
+      "--cw-fs-h3": "spacing",
+      "--cw-lh-h3": "spacing",
+      "--cw-fs-body-l": "spacing",
+      "--cw-lh-body-l": "spacing",
+      "--cw-fs-body": "spacing",
+      "--cw-lh-body": "spacing",
+      "--cw-ls-body": "spacing",
+      "--cw-fs-small": "spacing",
+      "--cw-lh-small": "spacing",
+      "--cw-fs-micro": "spacing",
+      "--cw-lh-micro": "spacing",
+      "--cw-s-1": "spacing",
+      "--cw-s-2": "spacing",
+      "--cw-s-3": "spacing",
+      "--cw-s-4": "spacing",
+      "--cw-s-5": "spacing",
+      "--cw-s-6": "spacing",
+      "--cw-s-8": "spacing",
+      "--cw-s-10": "spacing",
+      "--cw-s-12": "spacing",
+      "--cw-s-16": "spacing",
+      "--cw-s-20": "spacing",
+      "--cw-s-card-pad": "spacing",
+      "--cw-r-xs": "spacing",
+      "--cw-r-sm": "spacing",
+      "--cw-r-md": "spacing",
+      "--cw-r-lg": "spacing",
+      "--cw-r-xl": "spacing",
+      "--cw-r-2xl": "spacing",
+      "--cw-r-pill": "spacing",
+      "--cw-r-full": "spacing",
+      "--cw-elev-1": "shadow",
+      "--cw-elev-2": "shadow",
+      "--cw-elev-3": "shadow",
+      "--cw-ease": "other",
+      "--cw-dur-fast": "other",
+      "--cw-dur": "other",
+      "--cw-dur-slow": "other"
+    },
+    "fontFamilies": [
+      "HarmonyOS Sans SC",
+      "Satoshi"
+    ]
+  }
+}

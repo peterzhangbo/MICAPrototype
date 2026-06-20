@@ -1,0 +1,37 @@
+/* Shared base for preview cards. Each card is a self-contained HTML
+   file that the Design-System tab renders at ~700×its-height. Keep
+   each one focused: one concept, one card. */
+
+@import url("../colors_and_type.css");
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #FAFAFA;
+  font-family: var(--cw-font-sans);
+  color: var(--cw-ink);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.card {
+  padding: 28px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card.tight   { padding: 20px 24px; gap: 12px; }
+.card.dense   { padding: 16px 20px; gap: 8px;  }
+
+.row { display: flex; gap: 16px; align-items: center; }
+.col { display: flex; flex-direction: column; gap: 8px; }
+
+.label {
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--cw-ink-3);
+  font-weight: 500;
+}
+.mono { font-family: var(--cw-font-mono); font-size: 12px; }

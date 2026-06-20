@@ -1,0 +1,244 @@
+/* ───────────────────────────────────────────────────────────────
+   CoinW Design System — Colors & Type
+   Source of truth: Figma "Design System 2.0", "App Components 2.0",
+   "Web Components 2.0" (Display·Kira, Feedback·Zed, Input·Jony,
+   Navigation·Eric). Numbers below are extracted from the .fig files
+   verbatim, not invented.
+   ─────────────────────────────────────────────────────────────── */
+
+/* ─── Fonts ─── */
+@font-face {
+  font-family: "Satoshi";
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  src: url("fonts/Satoshi-Light.otf") format("opentype");
+}
+@font-face {
+  font-family: "Satoshi";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("fonts/Satoshi-Regular.otf") format("opentype");
+}
+@font-face {
+  font-family: "Satoshi";
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url("fonts/Satoshi-Medium.otf") format("opentype");
+}
+@font-face {
+  font-family: "Satoshi";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url("fonts/Satoshi-Bold.otf") format("opentype");
+}
+@font-face {
+  font-family: "Satoshi";
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+  src: url("fonts/Satoshi-Black.otf") format("opentype");
+}
+@font-face {
+  font-family: "HarmonyOS Sans SC";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url("fonts/HarmonyOS_Sans_SC_Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "HarmonyOS Sans SC";
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+  src: url("fonts/HarmonyOS_Sans_SC_Black.ttf") format("truetype");
+}
+
+:root {
+  /* ═══ COLOR — BRAND ════════════════════════════════════════
+     CoinW's brand is anchored on a saturated indigo-violet.
+     #5227FF is the workhorse. Two siblings (hover lighter, press
+     deeper) handle interaction. The accent violet #9747FF only
+     appears as the dashed swatch border in the Figma styleguide
+     itself — it's a layout aid, not for production UI.
+     ═════════════════════════════════════════════════════════ */
+  --cw-brand-500: #5227FF;          /* PRIMARY brand */
+  --cw-brand-400: #6C4FFF;          /* hover / lighter */
+  --cw-brand-700: #2509B3;          /* press / deeper */
+  --cw-brand-violet: #9747FF;       /* accent (used sparingly) */
+  --cw-brand-tint-08: rgba(82, 39, 255, 0.08);
+  --cw-brand-tint-12: rgba(82, 39, 255, 0.12);
+
+  /* ═══ COLOR — NEUTRALS ═════════════════════════════════════
+     Pure grays. #1A1A1A (not #000) is the de-facto black used
+     for body text, strokes and "black" buttons.
+     ═════════════════════════════════════════════════════════ */
+  --cw-ink:        #1A1A1A;         /* primary text + 1px strokes */
+  --cw-ink-2:      #404040;         /* secondary text */
+  --cw-ink-3:      #8C8C8C;         /* tertiary text / placeholder */
+  --cw-ink-4:      #BFBFBF;         /* disabled / hairline icon */
+  --cw-line:       #D9D9D9;         /* borders, dividers */
+  --cw-surface-2:  #F2F2F2;         /* subtle fill, chip bg */
+  --cw-surface-1:  #FFFFFF;         /* card / page */
+  --cw-black:      #000000;
+  --cw-white:      #FFFFFF;
+
+  /* alpha overlays */
+  --cw-ink-a05:    rgba(0, 0, 0, 0.05);
+  --cw-ink-a22:    rgba(0, 0, 0, 0.22);  /* shadow base */
+  --cw-shadow-soft: rgba(65, 91, 130, 0.12);
+
+  /* ═══ COLOR — SEMANTIC ═════════════════════════════════════
+     Crypto-domain semantics: gain green, loss red. Warning
+     orange + info blue round out the set.
+     ═════════════════════════════════════════════════════════ */
+  --cw-success: #14A739;            /* gain / confirmed */
+  --cw-error:   #E95032;            /* loss / failure */
+  --cw-warning: #FE6F00;            /* caution */
+  --cw-info:    #2D89CC;
+  --cw-lime:    #D1FF55;            /* hero / promo accent */
+  --cw-amber:   #EEA33A;            /* secondary accent */
+
+  /* ═══ TYPE — FAMILIES ══════════════════════════════════════ */
+  --cw-font-sans: "Satoshi", "HarmonyOS Sans SC", -apple-system,
+                   BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --cw-font-cjk:  "HarmonyOS Sans SC", "Satoshi", "PingFang SC",
+                   "Microsoft YaHei", sans-serif;
+  --cw-font-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  /* ═══ TYPE — SCALE ═════════════════════════════════════════
+     Extracted from Figma. CoinW uses a small set of sizes very
+     consistently. The 57/68 "display" is reserved for section
+     hero headings in the styleguide and marketing pages. Body
+     copy is 14/20 with +0.1px tracking — that 0.1px letter
+     spacing is the system's signature.
+     ═════════════════════════════════════════════════════════ */
+  --cw-fs-display: 57px;   --cw-lh-display: 68px;   --cw-ls-display: -0.25px;
+  --cw-fs-h1:      32px;   --cw-lh-h1:      40px;
+  --cw-fs-h2:      22px;   --cw-lh-h2:      28px;
+  --cw-fs-h3:      18px;   --cw-lh-h3:      24px;
+  --cw-fs-body-l:  16px;   --cw-lh-body-l:  24px;
+  --cw-fs-body:    14px;   --cw-lh-body:    20px;   --cw-ls-body: 0.1px;
+  --cw-fs-small:   12px;   --cw-lh-small:   16px;
+  --cw-fs-micro:   10px;   --cw-lh-micro:   14px;
+
+  /* ═══ SPACING (4-pt grid) ══════════════════════════════════ */
+  --cw-s-1:   4px;
+  --cw-s-2:   8px;
+  --cw-s-3:  12px;
+  --cw-s-4:  16px;
+  --cw-s-5:  20px;
+  --cw-s-6:  24px;
+  --cw-s-8:  32px;
+  --cw-s-10: 40px;
+  --cw-s-12: 48px;
+  --cw-s-16: 64px;
+  --cw-s-20: 80px;          /* section gutter on marketing pages */
+  --cw-s-card-pad: 90px;    /* the signature card inset in the styleguide */
+
+  /* ═══ RADIUS ═══════════════════════════════════════════════ */
+  --cw-r-xs:  5px;          /* swatch / specimen */
+  --cw-r-sm:  8px;
+  --cw-r-md: 12px;          /* buttons, inputs */
+  --cw-r-lg: 16px;          /* accordion */
+  --cw-r-xl: 20px;          /* cards */
+  --cw-r-2xl: 40px;         /* hero containers */
+  --cw-r-pill: 80px;        /* pills + chips */
+  --cw-r-full: 9999px;
+
+  /* ═══ ELEVATION ════════════════════════════════════════════ */
+  --cw-elev-1: 0 1px 2px rgba(65, 91, 130, 0.12);
+  --cw-elev-2: 0 4px 12px rgba(65, 91, 130, 0.12);
+  --cw-elev-3: 0 10px 30px rgba(0, 0, 0, 0.22);
+
+  /* ═══ MOTION ═══════════════════════════════════════════════ */
+  --cw-ease:    cubic-bezier(0.2, 0.8, 0.2, 1);
+  --cw-dur-fast: 120ms;
+  --cw-dur:      200ms;
+  --cw-dur-slow: 320ms;
+}
+
+/* ═══ SEMANTIC TEXT STYLES ════════════════════════════════════
+   Apply these as utility classes OR map onto your h1/h2/p tags.
+   ════════════════════════════════════════════════════════════ */
+
+html, body { font-family: var(--cw-font-sans); color: var(--cw-ink); }
+
+.cw-display, h1.cw-display {
+  font-family: var(--cw-font-sans);
+  font-weight: 700;
+  font-size: var(--cw-fs-display);
+  line-height: var(--cw-lh-display);
+  letter-spacing: var(--cw-ls-display);
+  color: var(--cw-ink);
+}
+.cw-h1, h1 {
+  font-family: var(--cw-font-sans);
+  font-weight: 700;
+  font-size: var(--cw-fs-h1);
+  line-height: var(--cw-lh-h1);
+  color: var(--cw-ink);
+}
+.cw-h2, h2 {
+  font-family: var(--cw-font-sans);
+  font-weight: 700;
+  font-size: var(--cw-fs-h2);
+  line-height: var(--cw-lh-h2);
+  color: var(--cw-ink);
+}
+.cw-h3, h3 {
+  font-family: var(--cw-font-sans);
+  font-weight: 700;
+  font-size: var(--cw-fs-h3);
+  line-height: var(--cw-lh-h3);
+  color: var(--cw-ink);
+}
+.cw-body-l {
+  font-size: var(--cw-fs-body-l);
+  line-height: var(--cw-lh-body-l);
+  font-weight: 400;
+  color: var(--cw-ink);
+}
+.cw-body, p {
+  font-size: var(--cw-fs-body);
+  line-height: var(--cw-lh-body);
+  letter-spacing: var(--cw-ls-body);
+  font-weight: 400;
+  color: var(--cw-ink);
+}
+.cw-body-strong { font-weight: 700; }
+.cw-body-medium { font-weight: 500; }
+.cw-small {
+  font-size: var(--cw-fs-small);
+  line-height: var(--cw-lh-small);
+  color: var(--cw-ink-3);
+}
+.cw-micro {
+  font-size: var(--cw-fs-micro);
+  line-height: var(--cw-lh-micro);
+  color: var(--cw-ink-3);
+}
+.cw-mono { font-family: var(--cw-font-mono); }
+
+.cw-fg-1  { color: var(--cw-ink); }
+.cw-fg-2  { color: var(--cw-ink-2); }
+.cw-fg-3  { color: var(--cw-ink-3); }
+.cw-fg-4  { color: var(--cw-ink-4); }
+.cw-fg-brand   { color: var(--cw-brand-500); }
+.cw-fg-success { color: var(--cw-success); }
+.cw-fg-error   { color: var(--cw-error); }
+.cw-fg-warning { color: var(--cw-warning); }
+
+.cw-bg-1  { background: var(--cw-surface-1); }
+.cw-bg-2  { background: var(--cw-surface-2); }
+.cw-bg-brand { background: var(--cw-brand-500); color: var(--cw-white); }
+
+/* hairline border like the figma cards */
+.cw-card {
+  background: var(--cw-surface-1);
+  border: 1px solid var(--cw-ink);
+  border-radius: var(--cw-r-xl);
+}
