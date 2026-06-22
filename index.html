@@ -1,22 +1,27 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="refresh" content="0; url=./Spec%20v3.0.dc.html">
-<title>CoinW × ZBX 欧洲站 MVP 原型</title>
-<script>location.replace("./Spec%20v3.0.dc.html");</script>
+<title>CoinW × ZBX · 欧洲站 MVP</title>
+<!-- 入口：自动跳转到最新版本页。新增版本时只改下面这一处 LATEST 即可 -->
+<script>
+  var LATEST = "Spec v3.1.dc.html";
+  location.replace(encodeURI(LATEST));
+</script>
+<meta http-equiv="refresh" content="0; url=Spec%20v3.1.dc.html">
 <style>
-  html,body{margin:0;height:100%;font-family:"Satoshi","PingFang SC",-apple-system,sans-serif;background:#ECEBF1;color:#1A1A1A}
-  .wrap{height:100%;display:flex;align-items:center;justify-content:center}
-  .card{text-align:center}
-  a{color:#5227FF;font-weight:700}
+  html,body{margin:0;height:100%;background:#ECEBF1;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#1A1A1A}
+  .wrap{height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px}
+  a{color:#5227FF;font-weight:700;text-decoration:none}
+  .dim{color:#8C8C8C;font-size:13px}
 </style>
 </head>
 <body>
-<div class="wrap"><div class="card">
-  正在打开原型…
-  <p>若未自动跳转，请 <a href="./Spec%20v3.0.dc.html">点此进入 →</a></p>
-</div></div>
+<div class="wrap">
+  <div class="dim">正在跳转到最新版本…</div>
+  <a href="Spec%20v3.1.dc.html">未自动跳转？点此打开 Spec v3.1 →</a>
+  <a href="Index.dc.html" class="dim" style="color:#8C8C8C">查看全部版本索引</a>
+</div>
 </body>
 </html>
